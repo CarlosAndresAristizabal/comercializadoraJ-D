@@ -12,8 +12,7 @@
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
   animation: scaleIn 0.4s ease forwards;
-  /* article no es el elemento interactivo; el enlace lo es */
-  height: 100%;
+   height: 100%;
 }
 a{
   text-decoration: none
@@ -37,7 +36,7 @@ a{
     padding: 0.5rem 0.5rem 0 0.5rem;
   }
 }
-}
+
 
 /* Accesibilidad: foco visible cuando la tarjeta (link) recibe foco */
 .card-link {
@@ -127,7 +126,7 @@ a{
   height: 4.6rem;
   margin: 0 0 0.35rem 0;
   text-align:center;
-  padding: 0.9rem 1rem 0 1rem; /* mantener separación del borde */
+  padding: 0.9rem 1rem 0 1rem;
 }
 
 .product-card .desc {
@@ -135,7 +134,7 @@ a{
   color: #555;
   margin: 0 0 0.6rem 0;
   min-height: 2.2rem;
-  /* Truncado multilinea a 3 lineas con ellipsis */
+
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -157,7 +156,7 @@ a{
 }
 
 .product-card .actions {
-  margin-top: 0.5rem; /* separacion del link */
+  margin-top: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;

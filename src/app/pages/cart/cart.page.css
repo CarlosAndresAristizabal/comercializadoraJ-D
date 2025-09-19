@@ -23,11 +23,11 @@
     font-size: 0.95rem;
   }
 }
-}
+
 .cart-products {
   padding: 2.5rem 5rem;
   font-size: 1.4rem;
-  ;
+
 }
 /* Estilo destacado para el bloque de totales */
 .totals {
@@ -111,7 +111,7 @@ top: 120px;
   transition: all 0.3s ease;
   animation: slideIn 0.5s ease forwards;
 }
-  margin-bottom: 1.5rem;
+
 
 .cart-item:hover {
   transform: translateY(-2px);
