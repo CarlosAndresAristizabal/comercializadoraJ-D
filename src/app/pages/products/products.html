@@ -1,0 +1,13 @@
+<section class="products-page container">
+  <h1>Productos</h1>
+
+  <div class="products-grid">
+    <product-card
+      *ngFor="let producto of productos; trackBy: trackById"
+      [product]="producto"
+      (add)="onAddToCart($event)"
+    ></product-card>
+  </div>
+</section>
+
+<app-toast></app-toast>

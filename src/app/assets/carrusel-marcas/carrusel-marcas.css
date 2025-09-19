@@ -1,0 +1,29 @@
+.carrusel-marcas {
+	width: 100%;
+	overflow: hidden;
+	padding: 2.5rem 0;
+	margin: 2rem auto;
+   mix-blend-mode: multiply;
+
+}
+.carrusel-track {
+	display: flex;
+	gap: 2.5rem;
+	align-items: center;
+	animation: carrusel-scroll 18s linear infinite;
+}
+.carrusel-track img {
+	height: 120px;
+	width: auto;
+	object-fit: cover;
+	padding: 0.5rem 1rem;
+	transition: transform 0.3s;
+
+}
+.carrusel-track img:hover {
+	transform: scale(1.08);
+}
+@keyframes carrusel-scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-340%); }
+}

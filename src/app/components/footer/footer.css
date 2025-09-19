@@ -1,0 +1,33 @@
+.footer-page {
+  width: 100%;
+  position: fixed;
+bottom: 0;
+  margin: 0 auto;
+  height: 60px;
+  background-color: rgba(134, 131, 131, 0.5);
+  color: #0c0c0c;
+  padding: 28px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgb(80, 80, 79, 0.2);
+  box-shadow: 0 -4px 20px rgb(80, 80, 79, 0.2);
+z-index: 4;
+}
+.footer-page h4{
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 480px), (max-width: 414px), (max-width: 412px), (max-width: 375px), (max-width: 360px) {
+  .footer-page {
+    height: 48px;
+    font-size: 0.9rem;
+    padding: 12px 0;
+  }
+}
+}

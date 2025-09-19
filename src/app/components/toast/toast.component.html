@@ -1,0 +1,10 @@
+<div class="toast-viewport" aria-live="polite">
+  <div
+    *ngFor="let msg of messages"
+    class="toast"
+    [attr.data-type]="msg.type"
+    [class.show]="msg.visible"
+  >
+    <div class="toast-body">{{ msg.text }}</div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<header class="site-header">
+  <a href="/"> <img src="/assets/img/logoPrincipal.jpg" alt="logo" class="logoPrincipal" /> </a>
+  <button class="menu-toggle" (click)="toggleMenu()" aria-label="Abrir menú" *ngIf="isMobile">
+    &#9776;
+  </button>
+  <nav [class.open]="menuOpen">
+    <button type="button" class="nav-btn" (click)="navigateTo('/')">Inicio</button>
+    <button type="button" class="nav-btn" (click)="navigateTo('/products')">Productos</button>
+    <button type="button" class="nav-btn" (click)="navigateTo('/about')">Nosotros</button>
+    <button type="button" class="nav-btn" (click)="navigateTo('/contact')">Contacto</button>
+
+    <div class="actions">
+      <a class="cart-btn" routerLink="/cart" aria-label="Ver carrito" (click)="closeMenu()">
+        <!-- simple cart SVG -->
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 6H21L20 12H8L6 6Z"
+            stroke="currentColor"
+            stroke-width="1.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <circle cx="10" cy="19" r="1" fill="currentColor" />
+          <circle cx="18" cy="19" r="1" fill="currentColor" />
+        </svg>
+        <span class="badge" *ngIf="itemCount > 0">{{ itemCount }}</span>
+      </a>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,40 @@
+<main class="cart-page container">
+  <h1>Carrito</h1>
+
+  <div *ngIf="items.length === 0" class="empty">
+    <p>Tu carrito está vacío.</p>
+    <hr />
+    <br />
+    <br />
+    <a href="/products" class="btn primary">Ver productos</a>
+  </div>
+
+  <div *ngIf="items.length > 0" class="cart-grid">
+    <div class="cart-products">
+      <div *ngFor="let item of items" class="cart-item">
+        <img src="{{ item.product.imageUrl }}" alt="{{ item.product.name }}" />
+        <div class="info">
+          <h3>{{ item.product.name }}</h3>
+          <p class="price">{{ item.product.price | currency }}</p>
+          <div class="quantity">
+            <button class="btn ghost" (click)="decrease(item)">-</button>
+            <span>{{ item.quantity }}</span> <button class="btn" (click)="increase(item)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart-controls">
+      <div class="totals">
+        <div class="subtotal">
+          Subtotal: <strong>{{ subtotal | currency }}</strong>
+        </div>
+        <div class="controls">
+          <button class="btn ghost red" (click)="clear()">Vaciar carrito</button>
+          <button class="btn primary blue" (click)="checkout()">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-toast></app-toast>
+</main>

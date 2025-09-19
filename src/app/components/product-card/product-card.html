@@ -1,0 +1,37 @@
+<article class="product-card">
+  <!-- Título arriba -->
+  <h3 class="title">{{ product.name }}</h3>
+
+  <!-- Link con imagen, descripción y precio -->
+  <a
+    class="card-link"
+    [routerLink]="['/products', product.id]"
+    aria-label="Ver detalle de {{ product.name }}"
+  >
+    <div class="thumb" aria-hidden="true">
+      <img [src]="product.imageUrl" alt="{{ product.name }}" title="{{ product.name }}" />
+    </div>
+
+    <div class="content">
+      <p class="desc">{{ product.description }}</p>
+      <div class="meta">
+        <span class="price">{{ product.price | currency }}</span>
+      </div>
+    </div>
+  </a>
+
+  <!-- Botón fuera del enlace, centrado -->
+  <div class="actions">
+    <button
+      type="button"
+      class="btn primary"
+      [class.loading]="adding"
+      [disabled]="adding"
+      (pointerdown)="$event.stopPropagation()"
+      (auxclick)="$event.stopPropagation()"
+      (click)="onAddToCart($event)"
+    >
+      <span *ngIf="adding">Añadiendo... </span> <span *ngIf="!adding">Añadir al carrito</span>
+    </button>
+  </div>
+</article>

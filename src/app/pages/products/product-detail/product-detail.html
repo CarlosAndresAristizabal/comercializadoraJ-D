@@ -1,0 +1,23 @@
+<main class="product-detail-page container">
+  <button class="btn primary ghost" (click)="goBack()">&larr; Volver</button>
+
+  <section>
+    <h1>{{ product?.name }}</h1>
+    <div class="detail-grid">
+      <div class="image">
+        <img [src]="product?.imageUrl" alt="{{ product?.name }}" loading="lazy" />
+      </div>
+      <div class="info">
+        <p class="price">{{ product?.price | currency }}</p>
+        <p class="desc">{{ product?.description }}</p>
+
+        <div class="actions">
+          <button class="btn primary green" (click)="addToCart()" [disabled]="isAdding">
+            {{ isAdding ? 'Añadiendo...' : 'Añadir al carrito' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-toast></app-toast>
+</main>

@@ -1,0 +1,92 @@
+<main>
+  <section class="contact-page container">
+    <h1 class="contact-title">Contacto</h1>
+    <div class="contact-grid">
+      <div class="image-card" aria-hidden="true">
+        <img src="/assets/img/contacto.jpg" alt="Imagen representativa de contacto" />
+      </div>
+      <div class="contact-card">
+        <div class="contact-center">
+          <p class="contact-description">
+            ¿Tienes dudas o quieres más información sobre nuestros productos? Escríbenos y te
+            responderemos lo antes posible.
+          </p>
+          <form
+            id="contactForm"
+            #contactForm="ngForm"
+            class="contact-form"
+            (ngSubmit)="onSubmit(contactForm)"
+            novalidate
+          >
+            <div class="field-row">
+              <label for="name">Nombre</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Tu nombre"
+                required
+                [(ngModel)]="name"
+                #nameField="ngModel"
+              />
+              <div class="field-error" *ngIf="nameField.invalid && nameField.touched">
+                Nombre requerido
+              </div>
+            </div>
+            <div class="field-row">
+              <label for="email">Correo electrónico</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="tu@correo.com"
+                required
+                [(ngModel)]="email"
+                #emailField="ngModel"
+              />
+              <div class="field-error" *ngIf="emailField.invalid && emailField.touched">
+                Correo válido requerido
+              </div>
+            </div>
+            <div class="field-row">
+              <label for="subject">Asunto</label>
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                placeholder="Asunto"
+                [(ngModel)]="subject"
+              />
+            </div>
+            <div class="field-row">
+              <label for="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Escribe tu mensaje"
+                required
+                [(ngModel)]="message"
+                #messageField="ngModel"
+              ></textarea>
+              <div class="field-error" *ngIf="messageField.invalid && messageField.touched">
+                Mensaje requerido
+              </div>
+            </div>
+            <div class="actions">
+              <button type="submit" class="btn primary" [disabled]="contactForm.invalid">
+                Enviar mensaje
+              </button>
+            </div>
+            <p class="form-note">
+              También puedes escribirnos a
+              <a href="mailto:info@comercializadora.com">info@comercializadora.com</a> o llamarnos
+              <br />
+              al <strong>+52 55 1234 5678</strong>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
