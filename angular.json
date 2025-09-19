@@ -19,13 +19,13 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
-                "output": "/"
+                "input": "src/assets",
+                "output": "/assets"
               },
               {
                 "glob": "**/*",
-                "input": "src/app/assets",
-                "output": "/assets"
+                "input": "public",
+                "output": "/"
               }
             ],
             "styles": ["src/styles.css"],
@@ -86,7 +86,7 @@
               },
               {
                 "glob": "**/*",
-                "input": "src/app/assets"
+                "input": "src/assets"
               }
             ],
             "styles": ["src/styles.css"]
