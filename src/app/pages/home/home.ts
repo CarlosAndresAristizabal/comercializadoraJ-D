@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { PromoCardComponent } from '../../components/promo-card/promo-card';
-import { CarruselMarcas } from 'src/assets/carrusel-marcas/carrusel-marcas';
+import { CarruselMarcas } from '../../assets/carrusel-marcas/carrusel-marcas';
 
 @Component({
   selector: 'app-home',
