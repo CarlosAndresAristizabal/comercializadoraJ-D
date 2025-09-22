@@ -50,7 +50,7 @@ export class Products {
       name: 'Licuadora Oster Clasica Cromada',
       price: 90000.0,
       description: 'Cromada, pica hielo, 1.25 lt, vaso vidrio 600 W, 3 aspas.',
-      imageUrl: '/assets/img/licuadoraOsterClasicaCromada.jpg'
+      imageUrl: '/assets/img/licuadoraOsterClasicaCromada.jpeg'
     },
     {
       id: 6,
@@ -88,7 +88,7 @@ export class Products {
       price: 90000.0,
       description:
         'Mallas seguras, base extra estable, función inclinaire, 3 velocidades, bajo consumo de energía.',
-      imageUrl: '/assets/img/ventiladorAirProtect.jpg'
+      imageUrl: '/assets/img/ventiladorAirProtect.jpeg'
     },
     {
       id: 11,
@@ -96,7 +96,7 @@ export class Products {
       price: 90000.0,
       description:
         'Dos veces mas flujo de aire, 3 veces mas silencioso, dispositivo para repelente en malla delantera.',
-      imageUrl: '/assets/img/ventiladorTurboSilenceRepelente.jpg'
+      imageUrl: '/assets/img/ventiladorTurboSilenceRepelente.jpeg'
     },
     {
       id: 12,
